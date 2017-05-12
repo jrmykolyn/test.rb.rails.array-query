@@ -1,0 +1,13 @@
+<h1>Recipes#Index</h1>
+
+<% if @recipes && !@recipes.empty? %>
+    <ul>
+    <% @recipes.each do | r | %>
+        <li>
+        <%= r.name %>
+        </li>
+    <% end %>
+    </ul>
+<% else %>
+    <h2>BOO!</h2>
+<% end %>

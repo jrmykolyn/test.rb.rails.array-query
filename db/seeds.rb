@@ -5,3 +5,25 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+name_bits = [
+	'The',
+	'Cool',
+	'Apple',
+	'Banana',
+	'Orange',
+	'Beet'
+]
+
+20.times do |i|
+	# ...
+	recipe = Recipe.new
+
+	# ...
+	name = ''
+	5.times { |i| name += name_bits.sample }
+	recipe.name = name;
+
+	# ...
+	recipe.save
+end
