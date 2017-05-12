@@ -9,11 +9,14 @@
 <% if @recipes && !@recipes.empty? %>
     <ul>
     <% @recipes.each do | r | %>
-        <li>
-        <%= r.name %>
+        <li style="margin-bottom: 30px;">
+		<h2 style="margin-bottom: 0;"><%= r.name %></h2>
+		<% r.ingredients.each do | ingredient | %>
+			<span><%= ingredient.name %></span>
+		<% end %>
         </li>
     <% end %>
     </ul>
 <% else %>
-    <h2>BOO!</h2>
+    <h2>Whoops! Looks like nothing matched your search terms.</h2>
 <% end %>
